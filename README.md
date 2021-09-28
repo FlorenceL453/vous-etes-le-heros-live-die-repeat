@@ -5,7 +5,7 @@
 
 **Inspiration**:[Outer Banks](https://www.imdb.com/title/tt10293938/)
 
-**Palette de couleurs**:[coolors.co](coolors.co/c5d08a-ffe8d1-b7a48b-90d4e0-a17c68)
+**Palette de couleurs**:[coolors.co](https://coolors.co/c5d08a-ffe8d1-b7a48b-90d4e0-a17c68)
 
 ## ![Diagramme](https://assets/vous_etes_le_heros_2,3version.png)
 
