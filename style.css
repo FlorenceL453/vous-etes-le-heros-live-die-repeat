@@ -1,0 +1,66 @@
+@font-face {
+  src: url("assets/font/Korataki Regular.ttf") format(ttf);
+  font-family: "korataki-regular";
+}
+:root {
+  --vert: #c5d08a;
+}
+:root {
+  --beige: #ffe8d1;
+}
+:root {
+  --brun: #b7a48b;
+}
+:root {
+  --bleu: #90d4e0;
+}
+:root {
+  --noisette: #a17c68;
+}
+html {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: var(--beige);
+}
+.game {
+  width: 750px;
+  height: 630px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #a17c68;
+}
+.logo {
+  font-family: "korataki-regular";
+}
+i {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  text-align: center;
+}
+.image1 {
+  width: 70%;
+  object-fit: contain;
+}
+.barreoption {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 750px;
+  margin-top: 20px;
+}
+.bouton1 {
+  background-color: var(--beige);
+  border: none;
+}
+.bouton1:hover {
+  background-color: var(--bleu);
+  border: none;
+}
