@@ -15,7 +15,7 @@
     }
      ]
    },
-   
+  
 const chapitre2 = {
     subtitle:"L'indice",
     text: "Une rumeur circule dans la ville qui raconte que le trésors serait en haute mer. Est-ce que vous voulez la suivre ou vous fier à votre indice",
@@ -30,10 +30,19 @@ const chapitre2 = {
      action:'goToChapter(chapitre3)',
     },
 },
+ 
 const chapitre3 = {
     subtitle:"Le fort",
     text: "Est-ce que vous décider de croire et de suivre les indication du veille homme pour trouver le trésor ou vous penser qu'il veux seulement vous en éloigne?",
-    img:"Outerbanks show.jpg"
+    img:"Outerbanks show.jpg",
+  {
+    text:'On ne suis pas ces conseilles il veux surement nous éloigner du trésor',
+     action:'goToChapter()',
+    },
+        {
+    text:'On vas suivre ses conseille, il à l'air de connaitre mieu le trésor que nous et il existe des personne bien intentionné dans la vie',
+     action:'goToChapter(chapitre4)',
+    },
 },
 const chapitre4 = {
     subtitle:"L'emplacement du trésor",
@@ -44,6 +53,5 @@ const chapitre4 = {
 function goToChapter(chapterName){
     let chapitre= chapterobjet[chapterName];
 }
-const options2 = ["",""]
-const options3 = ["On ne suis pas ces conseilles il veux surement nous éloigner du trésor","On vas suivre ses conseille, il à l'air de connaitre mieu le trésor que nous et il existe des personne bien intentionné dans la vie"];
+const options3 = ["On vas suivre ses conseille, il à l'air de connaitre mieu le trésor que nous et il existe des personne bien intentionné dans la vie"];
 const options4 = ["Non je n'est pas la carte de l'île","Oui j'ai la carte de l'île"]
