@@ -23,9 +23,7 @@ const chapitre4 = {
 },
    
 function goToChapter(chapterName){
-    let chapitre;
-    chapitreObjet = chapitre;
-    console.log ('chapitre');
+    let chapitre= chapterobjet[chapterName];
 }
 const options1 = ["Je veux tout chercher mes indices par moi même","On pourrais bien bénéficier d'aide pour commence"];
 const options2 = ["On suit la rumeur elle fait du sens","Je suis mon indice, il faut pas ce faire distraire par une faisse rumeur"]
