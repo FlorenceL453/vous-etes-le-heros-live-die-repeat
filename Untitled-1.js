@@ -1,7 +1,5 @@
 const chapitre1 = {
-    subtitle:"Lépave",
-    text: "Vous arriver à un épave de bateau d'un chasseur de trésor. Est-ce que vous sauter à l'eau pour voler ces indices ou vous chercher par vous même tout vos indices?",
-    img:"thumb_720_450_dreamstime_xxl_10604660-Custom.jpg"
+    
 };
 const chapitre2 = {
     subtitle:"L'indice",
@@ -19,11 +17,12 @@ const chapitre4 = {
     img:"parcel-map-final-1589481133.jpg"
 };
 const chapitreObjet = {
-    nom:"le_reveil"= function(){
-        console.log(`${chapitreObjet.chapitre1} ${chapitreObjet.chapitre2} ${chapitreObjet.chapitre3} ${chapitreObjet.chapitre4}`);
-    };
-
-};
+    chapter1:{
+    subtitle:"Lépave",
+    text: "Vous arriver à un épave de bateau d'un chasseur de trésor. Est-ce que vous sauter à l'eau pour voler ces indices ou vous chercher par vous même tout vos indices?",
+    img:"thumb_720_450_dreamstime_xxl_10604660-Custom.jpg"
+    },
+   
 function goToChapter(chapterName){
     let chapitre;
     chapitreObjet = chapitre;
