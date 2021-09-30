@@ -7,7 +7,7 @@
      option:[
      {
     text:'Je veux tout chercher mes indices par moi même',
-     action:'goToChapter',
+     action:'goToChapter(chapitre2)',
     },
    {
     text:'On pourrais bien bénéficier d'aide pour commence'm
