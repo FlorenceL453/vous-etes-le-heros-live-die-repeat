@@ -7,6 +7,6 @@
 
 **Palette de couleurs**:[coolors.co](https://coolors.co/c5d08a-ffe8d1-b7a48b-90d4e0-a17c68)
 
-## ![Diagramme](https://assets/img/vous_etes_le_heros_2%2C3version.png)
+## ![Diagramme](https://github.com/FlorenceL453/vous-etes-le-heros-live-die-repeat/blob/main/assets/img/vous_etes_le_heros_2%2C3version.png)
 
  
