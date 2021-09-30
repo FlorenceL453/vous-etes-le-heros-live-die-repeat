@@ -4,6 +4,16 @@
     subtitle:"Lépave",
     text: "Vous arriver à un épave de bateau d'un chasseur de trésor. Est-ce que vous sauter à l'eau pour voler ces indices ou vous chercher par vous même tout vos indices?",
     img:"thumb_720_450_dreamstime_xxl_10604660-Custom.jpg"
+     option:[
+     {
+    text:'Je veux tout chercher mes indices par moi même',
+     action:'goToChapter',
+    },
+   {
+    text:'On pourrais bien bénéficier d'aide pour commence'm
+     action:'goToChapter',
+    }
+     ]
    },
    
 const chapitre2 = {
@@ -25,7 +35,6 @@ const chapitre4 = {
 function goToChapter(chapterName){
     let chapitre= chapterobjet[chapterName];
 }
-const options1 = ["Je veux tout chercher mes indices par moi même","On pourrais bien bénéficier d'aide pour commence"];
 const options2 = ["On suit la rumeur elle fait du sens","Je suis mon indice, il faut pas ce faire distraire par une faisse rumeur"]
 const options3 = ["On ne suis pas ces conseilles il veux surement nous éloigner du trésor","On vas suivre ses conseille, il à l'air de connaitre mieu le trésor que nous et il existe des personne bien intentionné dans la vie"];
 const options4 = ["Non je n'est pas la carte de l'île","Oui j'ai la carte de l'île"]
