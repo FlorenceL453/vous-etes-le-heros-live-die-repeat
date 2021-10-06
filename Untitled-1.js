@@ -64,8 +64,9 @@ const chapter4 = {
   ],
 };
 
-function goToChapter() {}
-console.log(chapterObjet);
+function goToChapter(chapterName) {
+  console.log(chapter1.subtitle.text);
+}
 
 //let chapter = chapterobjet[chapterName];
 //chapter1.innerHTML = "";
