@@ -63,8 +63,8 @@ const chapterObjet = {
 
 function goToChapter(chapterName) {
   let chapter = chapterObjet[chapterName];
-  console.log(chapter.subtitle);
-  console.log(chapter.text);
+  goToChapter.innerHTML = chapter.subtitle;
+  goToChapter.innerHTML = chapter.text;
 }
 
 //chapter1.innerHTML = "";
