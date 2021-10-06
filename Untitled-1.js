@@ -1,4 +1,4 @@
-const chapitreObjet = {
+const chapterObjet = {
   chapter1: {
     subtitle: "Lépave",
     text: "Vous arriver à un épave de bateau d'un chasseur de trésor. Est-ce que vous sauter à l'eau pour voler ces indices ou vous chercher par vous même tout vos indices?",
@@ -64,6 +64,8 @@ const chapter4 = {
   ],
 };
 
-function goToChapter(chapterName) {
-  let chapitre = chapterobjet[chapterName];
-}
+function goToChapter() {}
+console.log(chapterObjet);
+
+//let chapter = chapterobjet[chapterName];
+//chapter1.innerHTML = "";
