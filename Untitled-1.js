@@ -66,6 +66,15 @@ function goToChapter(chapterName) {
   // console.log(chapter.subtitle);
   //  console.log(chapter.text);
   const ti = document.querySelector(".titre");
-  ti.innertext = chapter.subtitle;
+  ti.innerText = chapter.subtitle;
   console.log(ti.innerText);
+
+  const sT = document.querySelector(".sousTitre");
+  sT.innerText = chapter.text;
+  console.log(sT.innerText);
+
+  const img = document.querySelector(".image1");
+  img.innerHTML =
+    "<img src =\\assets img \thumb_720_450_dreamstime_xxl_10604660-Custom.jpg>";
+  console.log(img.innerHTML);
 }
