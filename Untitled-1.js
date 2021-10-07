@@ -55,7 +55,7 @@ const chapterObjet = {
       },
       {
         text: "Oui j'ai la carte de l'île",
-        action: "goToChapter(chapter)",
+        action: "goToChapter()",
       },
     ],
   },
@@ -77,5 +77,11 @@ function goToChapter(chapterName) {
   image.src = chapter.img;
   console.log(image.innerHTML);
 
-  // console.log(option.innerText);
+  for (let index = 0; index <= 2; index++) {
+    console.log(chapter.option);
+
+    const tab = document.querySelector(".barreoption");
+    tab.innerText = chapter.text;
+    console.log(tab.innerText);
+  }
 }
