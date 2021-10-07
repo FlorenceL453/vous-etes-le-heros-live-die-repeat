@@ -83,16 +83,18 @@ function goToChapter(chapterName) {
     const tab1 = document.querySelector(".bouton1");
     tab1.innerHTML = chapter.option[index].text;
     console.log(tab1.innerHTML);
+  }
 
-    for (let index = 0; index < 2; index++) {
-      console.log(chapter.option.text);
+  for (let index = 0; index < 2; index++) {
+    console.log(chapter.option.text);
 
-      const tab2 = document.querySelector(".bouton3");
-      tab2.innerHTML = chapter.option[index].text;
-      console.log(tab2.innerHTML);
-    }
+    const tab2 = document.querySelector(".bouton3");
+    tab2.innerHTML = chapter.option[index].text;
+    console.log(tab2.innerHTML);
+  }
+  function btn() {
+    console.log(goToChapter);
   }
   // a corriger
-document.querySelector(".bouton2")= "";
-  
+  //document.querySelector(".bouton2")= "";
 }
