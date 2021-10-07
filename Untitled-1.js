@@ -77,11 +77,22 @@ function goToChapter(chapterName) {
   image.src = chapter.img;
   console.log(image.innerHTML);
 
-  for (let index = 0; index <= 2; index++) {
-    console.log(chapter.option);
+  for (let index = 0; index < 1; index++) {
+    console.log(chapter.option.text);
 
-    const tab = document.querySelector(".barreoption");
-    tab.innerText = chapter.text;
-    console.log(tab.innerText);
+    const tab1 = document.querySelector(".bouton1");
+    tab1.innerHTML = chapter.option[index].text;
+    console.log(tab1.innerHTML);
+
+    for (let index = 0; index < 2; index++) {
+      console.log(chapter.option.text);
+
+      const tab2 = document.querySelector(".bouton3");
+      tab2.innerHTML = chapter.option[index].text;
+      console.log(tab2.innerHTML);
+    }
   }
+  // a corriger
+document.querySelector(".bouton2")= "";
+  
 }

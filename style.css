@@ -64,3 +64,19 @@ i {
   background-color: var(--bleu);
   border: none;
 }
+.bouton2 {
+  background-color: var(--beige);
+  border: none;
+}
+.bouton2:hover {
+  background-color: var(--bleu);
+  border: none;
+}
+.bouton3 {
+  background-color: var(--beige);
+  border: none;
+}
+.bouton3:hover {
+  background-color: var(--bleu);
+  border: none;
+}
