@@ -65,7 +65,7 @@ function goToChapter(chapterName) {
   let chapter = chapterObjet[chapterName];
   // console.log(chapter.subtitle);
   //  console.log(chapter.text);
-  chapter = document.querySelector(".titre");
-  chapter.innertext = chapter.subtitle;
-  console.log(chapter.innerText);
+  const ti = document.querySelector(".titre");
+  ti.innertext = chapter.subtitle;
+  console.log(ti.innerText);
 }
