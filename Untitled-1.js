@@ -70,7 +70,7 @@ function goToChapter(chapterName) {
   console.log(ti.innerText);
 
   function action() {
-    console.log(chapter.option.innerText);
+    console.log(goToChapter);
   }
 
   const sT = document.querySelector(".sousTitre");
