@@ -69,10 +69,6 @@ function goToChapter(chapterName) {
   ti.innerText = chapter.subtitle;
   console.log(ti.innerText);
 
-  function action() {
-    console.log(goToChapter);
-  }
-
   const sT = document.querySelector(".sousTitre");
   sT.innerText = chapter.text;
   console.log(sT.innerText);
