@@ -69,6 +69,10 @@ function goToChapter(chapterName) {
   ti.innerText = chapter.subtitle;
   console.log(ti.innerText);
 
+  function action() {
+    console.log(chapter.option.innerText);
+  }
+
   const sT = document.querySelector(".sousTitre");
   sT.innerText = chapter.text;
   console.log(sT.innerText);
@@ -92,9 +96,8 @@ function goToChapter(chapterName) {
     tab2.innerHTML = chapter.option[index].text;
     console.log(tab2.innerHTML);
   }
-  function btn() {
-    console.log(goToChapter);
-  }
-  // a corriger
-  //document.querySelector(".bouton2")= "";
+  //function action() {
+  //console.log(chapter.option.action);
 }
+// a corriger
+//document.querySelector(".bouton2")= "";
