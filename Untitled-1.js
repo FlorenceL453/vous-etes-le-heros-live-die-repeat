@@ -92,8 +92,7 @@ function goToChapter(chapterName) {
     tab2.innerHTML = chapter.option[index].text;
     console.log(tab2.innerHTML);
   }
-  //function action() {
-  //console.log(chapter.option.action);
 }
-// a corriger
-//document.querySelector(".bouton2")= "";
+//const remove = document.querySelector(".bouton2");
+
+//remove.innerHTML =
