@@ -1,4 +1,5 @@
 const chapterObjet = {
+  chapterRéveille: {},
   chapter1: {
     subtitle: "Lépave",
     text: "Vous arriver à un épave de bateau d'un chasseur de trésor. Est-ce que vous sauter à l'eau pour voler ces indices ou vous chercher par vous même tout vos indices?",
@@ -14,7 +15,8 @@ const chapterObjet = {
       },
     ],
   },
-  chapter2: {
+  chapter2: {},
+  chapter3: {
     subtitle: "L'indice",
     text: "Une rumeur circule dans la ville qui raconte que le trésors serait en haute mer. Est-ce que vous voulez la suivre ou vous fier à votre indice",
     img: "../assets/img/5993790.jpg",
@@ -25,11 +27,12 @@ const chapterObjet = {
       },
       {
         text: "Je suis mon indice, il faut pas ce faire distraire par une faisse rumeur",
-        action: "goToChapter(chapter3)",
+        action: "goToChapter(chapter4)",
       },
     ],
   },
-  chapter3: {
+  chapter4: {},
+  chapter5: {
     subtitle: "Le fort",
     text: "Est-ce que vous décider de croire et de suivre les indication du veille homme pour trouver le trésor ou vous penser qu'il veux seulement vous en éloigne?",
     img: "../assets/img/Outerbanks show.jpg",
@@ -40,11 +43,12 @@ const chapterObjet = {
       },
       {
         text: "On vas suivre ses conseille, il à l'air de connaitre mieu le trésor que nous et il existe des personne bien intentionné dans la vie",
-        action: "goToChapter(chapter4)",
+        action: "goToChapter(chapter6)",
       },
     ],
   },
-  chapter4: {
+  chapter6: {},
+  chapter7: {
     subtitle: "L'emplacement du trésor",
     text: "Alors rendu à cette étape une carte de l'île est nécéssaire pour savoir ou est l'emplacement que vous avez trouver sur l'île alors l'avez-vous?",
     img: "../assets/img/parcel-map-final-1589481133.jpg",
@@ -55,12 +59,12 @@ const chapterObjet = {
       },
       {
         text: "Oui j'ai la carte de l'île",
-        action: "goToChapter()",
+        action: "goToChapter(chapter8)",
       },
     ],
   },
+  chapter8: {},
 };
-
 function goToChapter(chapterName) {
   let chapter = chapterObjet[chapterName];
   // console.log(chapter.subtitle);
