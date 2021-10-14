@@ -1,5 +1,15 @@
 const chapterObjet = {
-  chapterRéveille: {},
+  chapterReveille: {
+    subtitle: "Le Réveille",
+    text: "Votre personnage Jonh B. se réveille",
+    img: "../",
+    option: [
+      {
+        text: "Je commence ma journée",
+        action: "goToChapter(chapitre1)",
+      },
+    ],
+  },
   chapter1: {
     subtitle: "Lépave",
     text: "Vous arriver à un épave de bateau d'un chasseur de trésor. Est-ce que vous sauter à l'eau pour voler ces indices ou vous chercher par vous même tout vos indices?",
@@ -7,7 +17,7 @@ const chapterObjet = {
     option: [
       {
         text: "Je veux tout chercher mes indices par moi même",
-        action: "goToChapter(chapitre2)",
+        action: "goToChapter(chapter1MC)",
       },
       {
         text: "On pourrais bien bénéficier d'aide pour commence",
@@ -15,7 +25,28 @@ const chapterObjet = {
       },
     ],
   },
-  chapter2: {},
+  chapter1MC: {
+    subtitle: "Vous manquer un indice",
+    text: "En cherchant par vous même vous manquer un indice important dons vous devez recommencer votre journée pour avoir une chance de la trouver.",
+    img: "../",
+    option: [
+      {
+        text: "Je veux tout chercher mes indices par moi même",
+        action: "goToChapter(chapterReveille)",
+      },
+    ],
+  },
+  chapter2: {
+    subtitle: "La Bousole",
+    text: "Vous trouver une bousole avec un indice écrit à l'arrière.",
+    img: "../",
+    option: [
+      {
+        text: "Je lis l'indice",
+        action: "goToChapter(chapitre3)",
+      },
+    ],
+  },
   chapter3: {
     subtitle: "L'indice",
     text: "Une rumeur circule dans la ville qui raconte que le trésors serait en haute mer. Est-ce que vous voulez la suivre ou vous fier à votre indice",
@@ -23,11 +54,33 @@ const chapterObjet = {
     option: [
       {
         text: "On suit la rumeur elle fait du sens",
-        action: "goToChapter()",
+        action: "goToChapter(chapter3MC)",
       },
       {
         text: "Je suis mon indice, il faut pas ce faire distraire par une faisse rumeur",
         action: "goToChapter(chapter4)",
+      },
+    ],
+  },
+  chapter3MC: {
+    subtitle: "La rumeur",
+    text: "En se préparant pour aller suivre la rumeur",
+    img: "../",
+    option: [
+      {
+        text: "Je veux tout chercher mes indices par moi même",
+        action: "goToChapter(chapterReveille)",
+      },
+    ],
+  },
+  chapter2: {
+    subtitle: "La Bousole",
+    text: "Vous trouver une bousole avec un indice écrit à l'arrière.",
+    img: "../",
+    option: [
+      {
+        text: "Je lis l'indice",
+        action: "goToChapter(chapitre3)",
       },
     ],
   },
