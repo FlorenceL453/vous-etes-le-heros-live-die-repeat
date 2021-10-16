@@ -21,7 +21,7 @@ const chapterObjet = {
       },
       {
         text: "On pourrais bien bénéficier d'aide pour commence",
-        action: "goToChapter",
+        action: "goToChapter(chapter2)",
       },
     ],
   },
@@ -38,7 +38,7 @@ const chapterObjet = {
   },
   chapter2: {
     subtitle: "La Bousole",
-    text: "Vous trouver une bousole avec un indice écrit à l'arrière.",
+    text: "Vous trouver une bousole avec un indice écrit à l'arrière. ",
     img: "../",
     option: [
       {
@@ -49,7 +49,7 @@ const chapterObjet = {
   },
   chapter3: {
     subtitle: "L'indice",
-    text: "Une rumeur circule dans la ville qui raconte que le trésors serait en haute mer. Est-ce que vous voulez la suivre ou vous fier à votre indice",
+    text: "Une rumeur circule dans la ville qui raconte que le trésors serait en haute mer. Est-ce que vous voulez la suivre ou vous voulez vous fier à votre indice",
     img: "../assets/img/5993790.jpg",
     option: [
       {
@@ -75,7 +75,7 @@ const chapterObjet = {
   },
   chapter4: {
     subtitle: "Le Chasseur de Trésor",
-    text: "en suivant l'indice cela vous mène à un ancien chasseur de trésor qui vous dit que le trésor n'est pas dans un épave de bateau mais bien sur l'île",
+    text: "En suivant l'indice cela vous mène à un ancien chasseur de trésor qui vous dit que le trésor n'est pas dans un épave de bateau mais bien sur l'île",
     img: "../",
     option: [
       {
@@ -102,7 +102,7 @@ const chapterObjet = {
   chapter5MC: {
     subtitle: "Une mauvaise désicion",
     text: "En ne suivant pas ses conseilles vous rater une piste très importante a votre quête donc vous devez recommencer votre journée pour avoir une chance de trouver le trésor",
-    img: "../assets/img/Outerbanks show.jpg",
+    img: "../",
     option: [
       {
         text: "Ok je vais recommencer",
@@ -117,15 +117,30 @@ const chapterObjet = {
     option: [
       {
         text: "Non je n'est pas la carte de l'île",
-        action: "goToChapter()",
+        action: "goToChapter(chapterReveille)",
       },
       {
         text: "Oui j'ai la carte de l'île",
-        action: "goToChapter(chapter8)",
+        action: "goToChapter(chapter7)",
       },
     ],
   },
-  chapter8: {},
+  chapter6MC: {
+    subtitle: "La carte de l'île",
+    text: "Parce que vous avex pas la carte de l'île vous dever recommencer pour la trouver.",
+    img: "../",
+    option: [
+      {
+        text: "D'accord",
+        action: "goToChapter(chapterReveille)",
+      },
+    ],
+  },
+  chapter7: {
+    subtitle: "Le trésor",
+    text: "Alors avec votre carte vous arrivez  à l'emplacement du trésor. Vous trouver le trésor intact sous le sol. Donc vous prenez toute l'or qu'il s'y trouve et vous la vendez pour récolter l'argent et vous devenez vraiment riche.",
+    img: "../",
+  },
 };
 function goToChapter(chapterName) {
   let chapter = chapterObjet[chapterName];
