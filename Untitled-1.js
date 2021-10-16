@@ -28,7 +28,7 @@ const chapterObjet = {
   chapter1MC: {
     subtitle: "Vous manquer un indice",
     text: "En cherchant par vous même vous manquer un indice important dons vous devez recommencer votre journée pour avoir une chance de la trouver.",
-    img: "../outerbanks_boat.jpg",
+    img: "../assets/img/outerbanks_boat.jpg",
     option: [
       {
         text: "Je veux tout chercher mes indices par moi même",
@@ -39,7 +39,7 @@ const chapterObjet = {
   chapter2: {
     subtitle: "La Bousole",
     text: "Vous trouver une bousole avec un indice écrit à l'arrière. ",
-    img: "../",
+    img: "../assets/img/bousole.jpg",
     option: [
       {
         text: "Je lis l'indice",
