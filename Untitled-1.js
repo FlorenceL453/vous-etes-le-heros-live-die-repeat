@@ -64,7 +64,7 @@ const chapterObjet = {
   },
   chapter3MC: {
     subtitle: "La rumeur",
-    text: "En se préparant pour aller suivre la rumeur",
+    text: "En se préparant pour aller en haute mer vous trouver une carte de l'île dans le bureau de votre père. Mais vous ne trouver pas de trésor en haute mers.",
     img: "../",
     option: [
       {
@@ -73,18 +73,17 @@ const chapterObjet = {
       },
     ],
   },
-  chapter2: {
-    subtitle: "La Bousole",
-    text: "Vous trouver une bousole avec un indice écrit à l'arrière.",
+  chapter4: {
+    subtitle: "Le Chasseur de Trésor",
+    text: "en suivant l'indice cela vous mène à un ancien chasseur de trésor qui vous dit que le trésor n'est pas dans un épave de bateau mais bien sur l'île",
     img: "../",
     option: [
       {
-        text: "Je lis l'indice",
-        action: "goToChapter(chapitre3)",
+        text: "Quoi faire ?",
+        action: "goToChapter(chapitre5)",
       },
     ],
   },
-  chapter4: {},
   chapter5: {
     subtitle: "Le fort",
     text: "Est-ce que vous décider de croire et de suivre les indication du veille homme pour trouver le trésor ou vous penser qu'il veux seulement vous en éloigne?",
@@ -92,7 +91,7 @@ const chapterObjet = {
     option: [
       {
         text: "On ne suis pas ces conseilles il veux surement nous éloigner du trésor",
-        action: "goToChapter()",
+        action: "goToChapter(chapter5MC)",
       },
       {
         text: "On vas suivre ses conseille, il à l'air de connaitre mieu le trésor que nous et il existe des personne bien intentionné dans la vie",
@@ -100,8 +99,18 @@ const chapterObjet = {
       },
     ],
   },
-  chapter6: {},
-  chapter7: {
+  chapter5MC: {
+    subtitle: "Une mauvaise désicion",
+    text: "En ne suivant pas ses conseilles vous rater une piste très importante a votre quête donc vous devez recommencer votre journée pour avoir une chance de trouver le trésor",
+    img: "../assets/img/Outerbanks show.jpg",
+    option: [
+      {
+        text: "Ok je vais recommencer",
+        action: "goToChapter(chapterReveille)",
+      },
+    ],
+  },
+  chapter6: {
     subtitle: "L'emplacement du trésor",
     text: "Alors rendu à cette étape une carte de l'île est nécéssaire pour savoir ou est l'emplacement que vous avez trouver sur l'île alors l'avez-vous?",
     img: "../assets/img/parcel-map-final-1589481133.jpg",
