@@ -169,11 +169,8 @@ function goToChapter(chapterName) {
   for (let index = 0; index < 2; index++) {
     console.log(chapter.option.text);
 
-    const tab2 = document.querySelector(".bouton3");
+    const tab2 = document.querySelector(".bouton2");
     tab2.innerHTML = chapter.option[index].text;
     console.log(tab2.innerHTML);
   }
 }
-//const remove = document.querySelector(".bouton2");
-
-//remove.innerHTML =
