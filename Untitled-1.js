@@ -163,9 +163,14 @@ function goToChapter(chapterName) {
 
     const tab1 = document.querySelector(".bouton1");
     tab1.innerHTML = chapter.option[index].text;
-    const click1 = document.querySelector(".bouton1");
 
     console.log(tab1.innerHTML);
+
+    const click1 = document.querySelector(".bouton1");
+
+    click1.onclick = function () {
+      document.querySelector("body").innerHTML = goToChapter(chapter);
+    };
   }
 
   for (let index = 0; index < 2; index++) {
