@@ -169,7 +169,7 @@ function goToChapter(chapterName) {
     const click1 = document.querySelector(".bouton1");
 
     click1.onclick = function () {
-      document.querySelector("body").innerHTML = goToChapter(chapter);
+      document.querySelector("body").innerHTML = chapter.option[index].action;
     };
   }
 
