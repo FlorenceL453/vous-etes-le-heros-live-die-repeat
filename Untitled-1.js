@@ -1,6 +1,6 @@
 const chapterObjet = {
   chapterReveille: {
-    subtitle: "Le Réveille",
+    subtitle: "Le Début De La Journée",
     text: "Votre personnage Jonh B. se réveille",
     img: "../",
     option: [
