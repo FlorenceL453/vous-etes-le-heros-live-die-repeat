@@ -65,7 +65,7 @@ const chapterObjet = {
   chapter3MC: {
     subtitle: "La rumeur",
     text: "En se préparant pour aller en haute mer vous trouver une carte de l'île dans le bureau de votre père. Mais vous ne trouver pas de trésor en haute mers.",
-    img: "../",
+    img: "../assets/img/rumeur.png",
     option: [
       {
         text: "Je veux tout chercher mes indices par moi même",
@@ -127,7 +127,7 @@ const chapterObjet = {
   },
   chapter6MC: {
     subtitle: "La carte de l'île",
-    text: "Parce que vous avex pas la carte de l'île vous dever recommencer pour la trouver.",
+    text: "Parce que vous avez pas la carte de l'île vous dever recommencer pour la trouver.",
     img: "../",
     option: [
       {
