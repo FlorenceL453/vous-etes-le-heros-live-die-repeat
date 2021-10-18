@@ -2,7 +2,7 @@ const chapterObjet = {
   chapterReveille: {
     subtitle: "Le Début De La Journée",
     text: "Votre personnage Jonh B. se réveille",
-    img: "../",
+    img: "../assets/img/johnb.jpg",
     option: [
       {
         text: "Je commence ma journée",
