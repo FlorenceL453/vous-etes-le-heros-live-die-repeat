@@ -76,7 +76,7 @@ const chapterObjet = {
   chapter4: {
     subtitle: "Le Chasseur de Trésor",
     text: "En suivant l'indice cela vous mène à un ancien chasseur de trésor qui vous dit que le trésor n'est pas dans un épave de bateau mais bien sur l'île",
-    img: "../",
+    img: "../assets/img/mauvaise_desicion.jpg",
     option: [
       {
         text: "Quoi faire ?",
@@ -102,7 +102,7 @@ const chapterObjet = {
   chapter5MC: {
     subtitle: "Une mauvaise désicion",
     text: "En ne suivant pas ses conseilles vous rater une piste très importante a votre quête donc vous devez recommencer votre journée pour avoir une chance de trouver le trésor",
-    img: "../",
+    img: "../assets/img/chasseur.jpg",
     option: [
       {
         text: "Ok je vais recommencer",
@@ -128,7 +128,7 @@ const chapterObjet = {
   chapter6MC: {
     subtitle: "La carte de l'île",
     text: "Parce que vous avez pas la carte de l'île vous dever recommencer pour la trouver.",
-    img: "../",
+    img: "../assets/img/pas_carte.jpg",
     option: [
       {
         text: "D'accord",
@@ -139,7 +139,7 @@ const chapterObjet = {
   chapter7: {
     subtitle: "Le trésor",
     text: "Alors avec votre carte vous arrivez  à l'emplacement du trésor. Vous trouver le trésor intact sous le sol. Donc vous prenez toute l'or qu'il s'y trouve et vous la vendez pour récolter l'argent et vous devenez vraiment riche.",
-    img: "../",
+    img: "../assets/img/parcel-map-final-1589481133.jpg",
   },
 };
 function goToChapter(chapterName) {
@@ -163,6 +163,8 @@ function goToChapter(chapterName) {
 
     const tab1 = document.querySelector(".bouton1");
     tab1.innerHTML = chapter.option[index].text;
+    const click1 = document.querySelector(".bouton1");
+
     console.log(tab1.innerHTML);
   }
 
