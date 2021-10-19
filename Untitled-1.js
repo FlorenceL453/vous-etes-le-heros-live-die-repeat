@@ -69,7 +69,7 @@ const chapterObjet = {
     option: [
       {
         text: "Je veux tout chercher mes indices par moi même",
-        action: "goToChapter(chapterReveille)",
+        action: "goToChapter(chapter6)",
       },
     ],
   },
@@ -111,12 +111,12 @@ const chapterObjet = {
     ],
   },
   chapter6: {
-    subtitle: "Vous trouver une carte de l'île",
-    text: "En suivant la piste du chasseur de trésor vous trouver une carte de l'île qui vous aideras à vous retrouver. ",
-    img: "../assets/img/chasseur.jpg",
+    subtitle: "Vous comprener ou est cahcer le trésor sur l'île.",
+    text: "En suivant la piste du chasseur de trésor vous trouver l'emplacement du trésor ",
+    img: "../assets/img/chapter6.jpg",
     option: [
       {
-        text: "Ok je vais recommencer",
+        text: "yey!!! Un indice de plus",
         action: "goToChapter(chapter7)",
       },
     ],
@@ -155,6 +155,7 @@ const chapterObjet = {
   },
 };
 function goToChapter(chapterName) {
+  foundedmap("chapter3MC");
   let chapter = chapterObjet[chapterName];
   // console.log(chapter.subtitle);
   //  console.log(chapter.text);
@@ -197,5 +198,12 @@ let mapFounded = False;
 
 function foundedmap() {
   mapFounded = true;
-  goToChapter("chapter");
+}
+function map() {
+  if (mapFounded == true) {
+    goToChapter("chapter8");
+  }
+  if (mapFounded == False) {
+    goToChapter("chapter7MC");
+  }
 }
