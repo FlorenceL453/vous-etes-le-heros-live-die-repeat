@@ -111,6 +111,18 @@ const chapterObjet = {
     ],
   },
   chapter6: {
+    subtitle: "Vous trouver une carte de l'île",
+    text: "En suivant la piste du chasseur de trésor vous trouver une carte de l'île qui vous aideras à vous retrouver. ",
+    img: "../assets/img/chasseur.jpg",
+    option: [
+      {
+        text: "Ok je vais recommencer",
+        action: "goToChapter(chapter7)",
+      },
+    ],
+  },
+
+  chapter7: {
     subtitle: "L'emplacement du trésor",
     text: "Alors rendu à cette étape une carte de l'île est nécéssaire pour savoir ou est l'emplacement que vous avez trouver sur l'île alors l'avez-vous?",
     img: "../assets/img/parcel-map-final-1589481133.jpg",
@@ -125,7 +137,7 @@ const chapterObjet = {
       },
     ],
   },
-  chapter6MC: {
+  chapter7MC: {
     subtitle: "La carte de l'île",
     text: "Parce que vous avez pas la carte de l'île vous dever recommencer pour la trouver.",
     img: "../assets/img/pas_carte.jpg",
@@ -136,7 +148,7 @@ const chapterObjet = {
       },
     ],
   },
-  chapter7: {
+  chapter8: {
     subtitle: "Le trésor",
     text: "Alors avec votre carte vous arrivez  à l'emplacement du trésor. Vous trouver le trésor intact sous le sol. Donc vous prenez toute l'or qu'il s'y trouve et vous la vendez pour récolter l'argent et vous devenez vraiment riche.",
     img: "../assets/img/parcel-map-final-1589481133.jpg",
@@ -180,4 +192,10 @@ function goToChapter(chapterName) {
     tab2.innerHTML = chapter.option[index].text;
     console.log(tab2.innerHTML);
   }
+}
+let mapFounded = False;
+
+function foundedmap() {
+  mapFounded = true;
+  goToChapter("chapter");
 }
