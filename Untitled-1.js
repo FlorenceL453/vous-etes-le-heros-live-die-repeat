@@ -181,8 +181,9 @@ function goToChapter(chapterName) {
 
     //boutons chapitre
 
-    document.querySelector("barreoption").innerHTML =
-      chapter.option[index].text;
+    document.querySelector(
+      "barreoption"
+    ).innerHTML = `<button type="button" value= '${chapter}.option[index].text 'onclick=' ${chapter}.option[index].action'`;
 
     //const click1 = document.querySelector(".bouton1");
     //click1.onclick = function () {};
