@@ -6,7 +6,7 @@ const chapterObjet = {
     option: [
       {
         text: "Je commence ma journée",
-        action: "goToChapter(chapitre1)",
+        action: "goToChapter(chapter1)",
       },
     ],
   },
@@ -179,11 +179,10 @@ function goToChapter(chapterName) {
 
     console.log(tab1.innerHTML);
 
-    const click1 = document.querySelector(".bouton1");
+    document.querySelector("barreoption").innerHTML;
 
-    click1.onclick = function () {
-      document.querySelector("body").innerHTML = goToChapter("chapter");
-    };
+    const click1 = document.querySelector(".bouton1");
+    click1.onclick = function () {};
   }
 
   for (let index = 0; index < 2; index++) {
