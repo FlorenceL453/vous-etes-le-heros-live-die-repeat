@@ -179,10 +179,13 @@ function goToChapter(chapterName) {
 
     console.log(tab1.innerHTML);
 
-    document.querySelector("barreoption").innerHTML;
+    //boutons chapitre
 
-    const click1 = document.querySelector(".bouton1");
-    click1.onclick = function () {};
+    document.querySelector("barreoption").innerHTML =
+      chapter.option[index].text;
+
+    //const click1 = document.querySelector(".bouton1");
+    //click1.onclick = function () {};
   }
 
   for (let index = 0; index < 2; index++) {
@@ -193,7 +196,7 @@ function goToChapter(chapterName) {
     console.log(tab2.innerHTML);
   }
 }
-let mapFounded = False;
+let mapFounded = false;
 
 function foundedmap() {
   mapFounded = true;
@@ -202,7 +205,7 @@ function map() {
   if (mapFounded == true) {
     goToChapter("chapter8");
   }
-  if (mapFounded == False) {
+  if (mapFounded == false) {
     goToChapter("chapter7MC");
   }
 }
