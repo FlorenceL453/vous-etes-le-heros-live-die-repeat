@@ -183,7 +183,7 @@ function goToChapter(chapterName) {
 
     document.querySelector(
       "barreoption"
-    ).innerHTML = `<button type="button" value= '${chapterObjet[chapterName].option[index].text}' onclick=' ${chapterObjet[chapterName].option[index].action}'`;
+    ).innerHTML = `<div><button type="button" value= '${chapterObjet[chapterName].option[index].text}' onclick=' ${chapterObjet[chapterName].option[index].action}'/></div>`;
 
     //const click1 = document.querySelector(".bouton1");
     //click1.onclick = function () {};
