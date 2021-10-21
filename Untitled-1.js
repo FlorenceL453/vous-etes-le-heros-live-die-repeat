@@ -187,7 +187,7 @@ function goToChapter(chapterName) {
 
     //const click1 = document.querySelector(".bouton1");
     //click1.onclick = function () {};
-  //}
+  }
 
   //for (let index = 0; index < 2; index++) {
    // console.log(chapter.option.text);
@@ -196,7 +196,7 @@ function goToChapter(chapterName) {
     //tab2.innerHTML = chapter.option[index].text;
     //console.log(tab2.innerHTML);
   //}
-//}
+}
 let mapFounded = false;
 
 function foundedmap() {
