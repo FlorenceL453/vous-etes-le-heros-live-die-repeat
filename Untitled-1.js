@@ -43,7 +43,7 @@ const chapterObjet = {
     option: [
       {
         text: "Je lis l'indice",
-        action: "goToChapter('chapitre3')",
+        action: "goToChapter('chapter3')",
       },
     ],
   },
@@ -80,7 +80,7 @@ const chapterObjet = {
     option: [
       {
         text: "Quoi faire ?",
-        action: "goToChapter('chapitre5')",
+        action: "goToChapter('chapter5')",
       },
     ],
   },
@@ -111,12 +111,12 @@ const chapterObjet = {
     ],
   },
   chapter6: {
-    subtitle: "Vous comprener ou est cahcer le trésor sur l'île.",
+    subtitle: "Vous comprener ou est cacher le trésor sur l'île.",
     text: "En suivant la piste du chasseur de trésor vous trouver l'emplacement du trésor ",
     img: "assets/img/chapter6.jpg",
     option: [
       {
-        text: "yey!!! Un indice de plus",
+        text: "Yey!!! Un indice de plus",
         action: "map()",
       },
     ],
@@ -150,7 +150,7 @@ const chapterObjet = {
   },
   chapter8: {
     subtitle: "Le trésor",
-    text: "Alors avec votre carte vous arrivez  à l'emplacement du trésor. Vous trouver le trésor intact sous le sol. Donc vous prenez toute l'or qu'il s'y trouve et vous la vendez pour récolter l'argent et vous devenez vraiment riche.",
+    text: "Alors avec votre carte vous arrivez  à l'emplacement du trésor. Vous trouver le trésor intact sous le sol. Donc vous prenez toute l'or qu'il s'y trouve et vous la vendez pour récolter l'argent et vous devenez vraiment riche!!!",
     img: "assets/img/parcel-map-final-1589481133.jpg",
     option: []
   },
@@ -174,7 +174,7 @@ function goToChapter(chapterName) {
   const barreOptions = document.querySelector(".barreoption");
   let buttons = '';
   for (let index = 0; index < chapter.option.length; index++) {
-    buttons += `<button onclick="${chapter.option[index].action}"/>${chapter.option[index].text}</button>`;
+    buttons += `<button class="bouton1" onclick="${chapter.option[index].action}"/>${chapter.option[index].text}</button>`;
   }
   barreOptions.innerHTML = buttons;
 }
