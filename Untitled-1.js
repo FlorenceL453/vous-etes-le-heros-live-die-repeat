@@ -183,8 +183,8 @@ function goToChapter(chapterName) {
   
   if (chapter.video != undefined) {
     const video= document.querySelector(".vid");
-    video.innerHTML= `<video src="assets/vid/giphy1.mp4">= ${chapter.video}</video>`;
-    console.log(video.innerHTML);
+    video.innerHTML= `<video src="${chapter.video}"></video>`;
+    //console.log(video.innerHTML);
     //`<video src="assets/vid/giphy1.mp4">= ${chapter.video}</video>`;
   }
 }
