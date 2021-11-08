@@ -104,6 +104,7 @@ const chapterObjet = {
     subtitle: "Une mauvaise désicion",
     text: "En ne suivant pas ses conseilles vous rater une piste très importante a votre quête donc vous devez recommencer votre journée pour avoir une chance de trouver le trésor",
     img: "assets/img/chasseur.jpg",
+    video: "assets/vid/giphy1.mp4",
     option: [
       {
         text: "Ok je vais recommencer",
@@ -178,6 +179,9 @@ function goToChapter(chapterName) {
     buttons += `<button class="bouton1" onclick="${chapter.option[index].action}"/>${chapter.option[index].text}</button>`;
   }
   barreOptions.innerHTML = buttons;
+  if (chapter == video) {
+    `<video src="assets/vid/giphy1.mp4"> </video>`;
+  }
 }
 
 let mapFounded = false;
