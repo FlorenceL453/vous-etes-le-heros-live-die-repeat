@@ -179,10 +179,12 @@ function goToChapter(chapterName) {
     buttons += `<button class="bouton1" onclick="${chapter.option[index].action}"/>${chapter.option[index].text}</button>`;
   }
   barreOptions.innerHTML = buttons;
-  if (chapter == video) {
-    `<video src="assets/vid/giphy1.mp4"></video>`;
-    console.log(chapter.video);
-  }
+  console.log(chapter.video);
+  //if (chapter == chapter.video) {
+  //`<video src="assets/vid/giphy1.mp4"></video>`;
+  //console.log(chapter.video);
+  //
+  //}
 }
 
 let mapFounded = false;
