@@ -181,6 +181,7 @@ function goToChapter(chapterName) {
   barreOptions.innerHTML = buttons;
   if (chapter == video) {
     `<video src="assets/vid/giphy1.mp4"></video>`;
+    console.log(chapter.video);
   }
 }
 
