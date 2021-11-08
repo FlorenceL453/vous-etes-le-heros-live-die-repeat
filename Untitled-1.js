@@ -180,7 +180,7 @@ function goToChapter(chapterName) {
   }
   barreOptions.innerHTML = buttons;
   console.log(chapter.video);
-  
+  //vid ne fonctionne pas et il en manque un a trouver
   if (chapter.video != undefined) {
     const video= document.querySelector(".vid");
     video.innerHTML= `<video src="${chapter.video}"></video>`;
