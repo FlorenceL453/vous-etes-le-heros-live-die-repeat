@@ -1,3 +1,4 @@
+// note de prof (Tu n’as pas été pénalisé, mais tu peux appeler ton premier chapitre à la fin du code JavaScript afin de démarrer ton jeu dès le chargement de la page.)
 const chapterObjet = {
   chapterReveille: {
     subtitle: "Le Début De La Journée",
@@ -152,7 +153,7 @@ const chapterObjet = {
     subtitle: "Le trésor",
     text: "Alors avec votre carte vous arrivez  à l'emplacement du trésor. Vous trouver le trésor intact sous le sol. Donc vous prenez toute l'or qu'il s'y trouve et vous la vendez pour récolter l'argent et vous devenez vraiment riche!!!",
     img: "assets/img/parcel-map-final-1589481133.jpg",
-    option: []
+    option: [],
   },
 };
 function goToChapter(chapterName) {
@@ -172,7 +173,7 @@ function goToChapter(chapterName) {
   console.log(image.innerHTML);
 
   const barreOptions = document.querySelector(".barreoption");
-  let buttons = '';
+  let buttons = "";
   for (let index = 0; index < chapter.option.length; index++) {
     buttons += `<button class="bouton1" onclick="${chapter.option[index].action}"/>${chapter.option[index].text}</button>`;
   }
@@ -183,7 +184,7 @@ let mapFounded = false;
 
 function foundedmap() {
   mapFounded = true;
-  goToChapter('chapter3MC')
+  goToChapter("chapter3MC");
 }
 
 function map() {
@@ -195,4 +196,4 @@ function map() {
   }
 }
 
-goToChapter('chapterReveille');
+goToChapter("chapterReveille");
