@@ -4,6 +4,7 @@ const chapterObjet = {
     subtitle: "Le Début De La Journée",
     text: "Votre personnage Jonh B. se réveille",
     img: "assets/img/johnb.jpg",
+    video:'assets/vid/giphy2.mp4',
     option: [
       {
         text: "Je commence ma journée",

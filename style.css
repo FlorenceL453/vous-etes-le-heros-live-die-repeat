@@ -48,6 +48,10 @@ i {
   width: 70%;
   object-fit: contain;
 }
+.vid{
+  width: 70%;
+  object-fit: contain;
+}
 .barreoption {
   display: inline-flex;
   flex-direction: row;
@@ -80,4 +84,3 @@ i {
   background-color: var(--bleu);
   border: none;
 }
-.vid{}
