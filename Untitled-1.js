@@ -212,6 +212,12 @@ function goToChapter(chapterName) {
     //console.log(video.innerHTML);
     //`<video src="assets/vid/giphy1.mp4">= ${chapter.video}</video>`;
   }
+  //Son a chaque chapitre
+
+  const son = new Audio('assets/son/PAPRHndl_Pages qu on tourne 7 (ID 2214)_LS.mp3');
+  if(chapter.son != undefined){
+    son.play();
+  }
 }
 
 let mapFounded = false;
