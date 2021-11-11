@@ -204,17 +204,16 @@ function goToChapter(chapterName) {
       video.play();
     })
     video.loop
+     //console.log(video.innerHTML);
+    //`<video src="assets/vid/giphy1.mp4">= ${chapter.video}</video>`;
   }
   else if(chapter.video== undefined){
     
-    image.src = chapter.img;
-
-    //console.log(video.innerHTML);
-    //`<video src="assets/vid/giphy1.mp4">= ${chapter.video}</video>`;
+    image.img= chapter.img;
   }
   //Son a chaque chapitre
 
-  const son = new Audio('assets/son/PAPRHndl_Pages qu on tourne 7 (ID 2214)_LS.mp3');
+  const son = new Audio('assets/son/son_page.mp3');
   if(chapter.son != undefined){
     son.play();
   }
