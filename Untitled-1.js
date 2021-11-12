@@ -1,4 +1,7 @@
 // note de prof (Tu n’as pas été pénalisé, mais tu peux appeler ton premier chapitre à la fin du code JavaScript afin de démarrer ton jeu dès le chargement de la page.)
+
+localStorage.setItem("chapitreAJ", "");
+
 const chapterObjet = {
   chapterReveille: {
     subtitle: "Le Début De La Journée",
@@ -183,7 +186,7 @@ function goToChapter(chapterName) {
   sT.innerText = chapter.text;
   console.log(sT.innerText);
 
-  const image = document.querySelector(".image1");
+  const image = document.querySelector(".vid .image1");
   image.src = chapter.img;
   console.log(image.innerHTML);
 
@@ -196,27 +199,27 @@ function goToChapter(chapterName) {
   console.log(chapter.video);
 
   //vid ne joue pas
-  if (chapter.video != undefined) {
-    const video= document.querySelector(".vid");
-    video.innerHTML= `<video src="${chapter.video}"></video>`;
-
-    video.addEventListener('canplay', function(){
-      video.play();
-    })
-    video.loop
+ if (chapter.video != undefined) {
+  const video= document.querySelector(".vid");
+  video.innerHTML= `<video src="${chapter.video}"></video>`;
+ }
+    //video.addEventListener('canplay', function(){
+    //  video.play();
+   // })
+   // video.loop
      //console.log(video.innerHTML);
     //`<video src="assets/vid/giphy1.mp4">= ${chapter.video}</video>`;
-  }
-  else if(chapter.video== undefined){
+  //}
+  //else if(chapter.video == undefined){
     
-    image.img= chapter.img;
-  }
+   // image.src= chapter.img;
+ // }
   //Son a chaque chapitre
 
-  const son = new Audio('assets/son/son_page.mp3');
-  if(chapter.son != undefined){
-    son.play();
-  }
+  //const son = new Audio('assets/son/son_page.mp3');
+  //if(chapter.son != undefined){
+  //  son.play();
+  //}
 }
 
 let mapFounded = false;
