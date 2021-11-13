@@ -201,7 +201,7 @@ function goToChapter(chapterName) {
   //vid ne joue pas
  if (chapter.video != undefined) {
   const video= document.querySelector(".vid");
-  video.innerHTML= `<video src="${chapter.video}"></video>`;
+  video.innerHTML= `<video src="${chapter.video}" loop muted autoplay ></video>`;
  }
     //video.addEventListener('canplay', function(){
     //  video.play();
