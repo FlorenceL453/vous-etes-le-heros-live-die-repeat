@@ -1,9 +1,10 @@
 // note de prof (Tu n’as pas été pénalisé, mais tu peux appeler ton premier chapitre à la fin du code JavaScript afin de démarrer ton jeu dès le chargement de la page.)
+//localStorage.setItem("chapitreAJ",);
 
 const chapterObjet = {
   chapterReveille: {
     subtitle: "Le Début De La Journée",
-    text: "Votre personnage Jonh B. se réveille",
+    text: "Votre personnage Jonh B. commence sa journée",
     img: "assets/img/johnb.jpg",
     video:'assets/vid/giphy2.mp4',
     son:'assets/son/son_page.mp3',
@@ -211,9 +212,10 @@ function goToChapter(chapterName) {
 
   //LocalStorage
 
-  if( chapter.action != undefined){
-    localStorage.setItem("chapitreAJ", "chapter");
+  if( chapter.action == undefined){
+    localStorage.setItem("chapitreAJ", chapter.subtitle);
   }
+  //goToChapter('chapitreAJ');
 }
 
 let mapFounded = false;
@@ -221,6 +223,7 @@ let mapFounded = false;
 function foundedmap() {
   mapFounded = true;
   goToChapter("chapter3MC");
+ // localStorage.setItem("chapitreAJ", "");
 }
 
 function map() {
