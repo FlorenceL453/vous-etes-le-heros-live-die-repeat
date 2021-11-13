@@ -44,12 +44,16 @@ i {
   font-family: "IBM Plex Sans Arabic", sans-serif;
   text-align: center;
 }
-.image1 {
+img {
+  display: inline-flex;
+  justify-content: center;
   width: 70%;
   object-fit: contain;
 }
 .vid{
-  width: 70%;
+  display: inline-flex;
+  justify-content: center;
+  width: 750px;
   object-fit: contain;
 }
 .barreoption {

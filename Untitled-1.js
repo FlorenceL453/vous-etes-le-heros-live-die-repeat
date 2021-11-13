@@ -183,11 +183,6 @@ function goToChapter(chapterName) {
   const sT = document.querySelector(".sousTitre");
   sT.innerText = chapter.text;
   console.log(sT.innerText);
-  
-  const image = document.querySelector(".image1");
-  image.src = chapter.img;
-  console.log(image.innerHTML);
-  
 
   const barreOptions = document.querySelector(".barreoption");
   let buttons = "";
@@ -203,16 +198,16 @@ function goToChapter(chapterName) {
   video.innerHTML= `<video src="${chapter.video}" loop muted autoplay ></video>`;
  }
   if(chapter.video == undefined){
+    const video= document.querySelector(".vid");
    video.innerHTML= `<img src="${chapter.img}"></img>`;
   }
 
   //Son a chaque chapitre
 
-  
-  if(chapter.son != undefined){
-    const son = new Audio('assets/son/son_page.mp3');
-    son.innerHTML = `<audio src="${chapter.son}" autoplay></audio>`;
-  }
+  //if(chapter.son != undefined){
+    const son =  document.querySelector(".audio");
+   son.innerHTML = `<audio src="${chapter.son}" autoplay></audio>`;
+  //}
 
   //LocalStorage
 
