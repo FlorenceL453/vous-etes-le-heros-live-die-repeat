@@ -186,7 +186,7 @@ function goToChapter(chapterName) {
   sT.innerText = chapter.text;
   console.log(sT.innerText);
 
-  const image = document.querySelector(".vid .image1");
+  const image = document.querySelector(".image1");
   image.src = chapter.img;
   console.log(image.innerHTML);
 
@@ -203,23 +203,17 @@ function goToChapter(chapterName) {
   const video= document.querySelector(".vid");
   video.innerHTML= `<video src="${chapter.video}" loop muted autoplay ></video>`;
  }
-    //video.addEventListener('canplay', function(){
-    //  video.play();
-   // })
-   // video.loop
-     //console.log(video.innerHTML);
-    //`<video src="assets/vid/giphy1.mp4">= ${chapter.video}</video>`;
-  //}
-  //else if(chapter.video == undefined){
-    
-   // image.src= chapter.img;
- // }
+  if(chapter.video == undefined){
+   image.src= chapter.img;
+  }
+
   //Son a chaque chapitre
 
-  //const son = new Audio('assets/son/son_page.mp3');
-  //if(chapter.son != undefined){
-  //  son.play();
-  //}
+  
+  if(chapter.son != undefined){
+    const son = new Audio('assets/son/son_page.mp3');
+    son.innerHTML = `<audio src="${chapter.son}" autoplay></audio>`;
+  }
 }
 
 let mapFounded = false;
