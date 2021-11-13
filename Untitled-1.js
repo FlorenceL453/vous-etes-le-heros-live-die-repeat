@@ -1,14 +1,12 @@
 // note de prof (Tu n’as pas été pénalisé, mais tu peux appeler ton premier chapitre à la fin du code JavaScript afin de démarrer ton jeu dès le chargement de la page.)
 
-localStorage.setItem("chapitreAJ", "");
-
 const chapterObjet = {
   chapterReveille: {
     subtitle: "Le Début De La Journée",
     text: "Votre personnage Jonh B. se réveille",
     img: "assets/img/johnb.jpg",
     video:'assets/vid/giphy2.mp4',
-    son:'',
+    son:'assets/son/son_page.mp3',
     option: [
       {
         text: "Je commence ma journée",
@@ -20,7 +18,7 @@ const chapterObjet = {
     subtitle: "Lépave",
     text: "Vous arriver à un épave de bateau d'un chasseur de trésor. Est-ce que vous sauter à l'eau pour voler ces indices ou vous chercher par vous même tout vos indices?",
     img: "assets/img/thumb_720_450_dreamstime_xxl_10604660-Custom.jpg",
-    son:'',
+    son:'assets/son/son_page.mp3',
     option: [
       {
         text: "Je veux tout chercher mes indices par moi même",
@@ -36,7 +34,7 @@ const chapterObjet = {
     subtitle: "Vous manquer un indice",
     text: "En cherchant par vous même vous manquer un indice important dons vous devez recommencer votre journée pour avoir une chance de la trouver.",
     img: "assets/img/outerbanks_boat.jpg",
-    son:'',
+    son:'assets/son/son_page.mp3',
     option: [
       {
         text: "Je veux tout chercher mes indices par moi même",
@@ -48,7 +46,7 @@ const chapterObjet = {
     subtitle: "La Bousole",
     text: "Vous trouver une bousole avec un indice écrit à l'arrière. ",
     img: "assets/img/bousole.jpg",
-    son:'',
+    son:'assets/son/son_page.mp3',
     option: [
       {
         text: "Je lis l'indice",
@@ -60,7 +58,7 @@ const chapterObjet = {
     subtitle: "L'indice",
     text: "Une rumeur circule dans la ville qui raconte que le trésors serait en haute mer. Est-ce que vous voulez la suivre ou vous voulez vous fier à votre indice",
     img: "assets/img/5993790.jpg",
-    son:'',
+    son:'assets/son/son_page.mp3',
     option: [
       {
         text: "On suit la rumeur elle fait du sens",
@@ -76,7 +74,7 @@ const chapterObjet = {
     subtitle: "La rumeur",
     text: "En se préparant pour aller en haute mer vous trouver une carte de l'île dans le bureau de votre père. Mais vous ne trouver pas de trésor en haute mers.",
     img: "assets/img/rumeur.png",
-    son:'',
+    son:'assets/son/son_page.mp3',
     option: [
       {
         text: "Je veux tout chercher mes indices par moi même",
@@ -88,7 +86,7 @@ const chapterObjet = {
     subtitle: "Le Chasseur de Trésor",
     text: "En suivant l'indice cela vous mène à un ancien chasseur de trésor qui vous dit que le trésor n'est pas dans un épave de bateau mais bien sur l'île",
     img: "assets/img/mauvaise_desicion.jpg",
-    son:'',
+    son:'assets/son/son_page.mp3',
     option: [
       {
         text: "Quoi faire ?",
@@ -100,7 +98,7 @@ const chapterObjet = {
     subtitle: "Le fort",
     text: "Est-ce que vous décider de croire et de suivre les indication du veille homme pour trouver le trésor ou vous penser qu'il veux seulement vous en éloigne?",
     img: "assets/img/Outerbanks show.jpg",
-    son:'',
+    son:'assets/son/son_page.mp3',
     option: [
       {
         text: "On ne suis pas ces conseilles il veux surement nous éloigner du trésor",
@@ -117,7 +115,7 @@ const chapterObjet = {
     text: "En ne suivant pas ses conseilles vous rater une piste très importante a votre quête donc vous devez recommencer votre journée pour avoir une chance de trouver le trésor",
     img: "assets/img/chasseur.jpg",
     video: "assets/vid/giphy1.mp4",
-    son:'',
+    son:'assets/son/son_page.mp3',
     option: [
       {
         text: "Ok je vais recommencer",
@@ -129,7 +127,7 @@ const chapterObjet = {
     subtitle: "Vous comprener ou est cacher le trésor sur l'île.",
     text: "En suivant la piste du chasseur de trésor vous trouver l'emplacement du trésor ",
     img: "assets/img/chapter6.jpg",
-    son:'',
+    son:'assets/son/son_page.mp3',
     option: [
       {
         text: "Yey!!! Un indice de plus",
@@ -142,7 +140,7 @@ const chapterObjet = {
     subtitle: "L'emplacement du trésor",
     text: "Alors rendu à cette étape une carte de l'île est nécéssaire pour savoir ou est l'emplacement que vous avez trouver sur l'île alors l'avez-vous?",
     img: "assets/img/parcel-map-final-1589481133.jpg",
-    son:'',
+    son:'assets/son/son_page.mp3',
     option: [
       {
         text: "Non je n'est pas la carte de l'île",
@@ -158,7 +156,7 @@ const chapterObjet = {
     subtitle: "La carte de l'île",
     text: "Parce que vous avez pas la carte de l'île vous dever recommencer pour la trouver.",
     img: "assets/img/pas_carte.jpg",
-    son:'',
+    son:'assets/son/son_page.mp3',
     option: [
       {
         text: "D'accord",
@@ -170,7 +168,7 @@ const chapterObjet = {
     subtitle: "Le trésor",
     text: "Alors avec votre carte vous arrivez  à l'emplacement du trésor. Vous trouver le trésor intact sous le sol. Donc vous prenez toute l'or qu'il s'y trouve et vous la vendez pour récolter l'argent et vous devenez vraiment riche!!!",
     img: "assets/img/parcel-map-final-1589481133.jpg",
-    son:'',
+    son:'assets/son/son_page.mp3',
     option: [],
   },
 };
@@ -213,6 +211,12 @@ function goToChapter(chapterName) {
   if(chapter.son != undefined){
     const son = new Audio('assets/son/son_page.mp3');
     son.innerHTML = `<audio src="${chapter.son}" autoplay></audio>`;
+  }
+
+  //LocalStorage
+
+  if( chapter.action != undefined){
+    localStorage.setItem("chapitreAJ", "chapter");
   }
 }
 
