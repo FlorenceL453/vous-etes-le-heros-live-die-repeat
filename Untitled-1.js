@@ -1,5 +1,6 @@
 // note de prof (Tu n’as pas été pénalisé, mais tu peux appeler ton premier chapitre à la fin du code JavaScript afin de démarrer ton jeu dès le chargement de la page.)
-//localStorage.setItem("chapitreAJ",);
+
+//localStorage.setItem("chapitreAJ");
 
 const chapterObjet = {
   chapterReveille: {
@@ -215,6 +216,7 @@ function goToChapter(chapterName) {
   if( chapter.action == undefined){
     localStorage.setItem("chapitreAJ", chapter.subtitle);
   }
+  localStorage.setItem("chapitreAJ");
   //goToChapter('chapitreAJ');
 }
 
