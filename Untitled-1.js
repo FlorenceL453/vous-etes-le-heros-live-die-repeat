@@ -214,10 +214,12 @@ function goToChapter(chapterName) {
   //LocalStorage
 
   if( chapter.action == undefined){
-    localStorage.setItem("chapitreAJ", chapter.subtitle);
+    localStorage.getItem("chapitreAJ");
+    //localStorage.setItem("chapitreAJ", chapter.subtitle);
   }
-  localStorage.setItem("chapitreAJ");
-  //goToChapter('chapitreAJ');
+  localStorage.setItem("chapitreAJ", chapter.subtitle);
+  
+
 }
 
 let mapFounded = false;
@@ -225,7 +227,7 @@ let mapFounded = false;
 function foundedmap() {
   mapFounded = true;
   goToChapter("chapter3MC");
- // localStorage.setItem("chapitreAJ", "");
+ localStorage.setItem("chapitreAJ", mapFounded);
 }
 
 function map() {
