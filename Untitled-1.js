@@ -214,21 +214,22 @@ function goToChapter(chapterName) {
   //LocalStorage
 
   if( chapter.action == undefined){
-    localStorage.getItem("chapitreAJ");
-    //localStorage.setItem("chapitreAJ", chapter.subtitle);
+    localStorage.setItem("chapitreAJ", chapter.subtitle);
   }
-  localStorage.setItem("chapitreAJ", chapter.subtitle);
-  
+  localStorage.getItem("chapitreAJ");
 
 }
 
 let mapFounded = false;
+localStorage.setItem("chapitreAJ", mapFounded);
+localStorage.getItem("chapitreAJ");
 
 function foundedmap() {
   mapFounded = true;
   goToChapter("chapter3MC");
  localStorage.setItem("chapitreAJ", mapFounded);
 }
+localStorage.getItem("chapitreAJ");
 
 function map() {
   if (mapFounded == true) {
