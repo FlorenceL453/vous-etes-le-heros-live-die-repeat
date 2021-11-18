@@ -31,6 +31,7 @@ const chapterObjet = {
         action: "goToChapter('chapter2')",
       },
     ],
+    
   },
   chapter1MC: {
     subtitle: "Vous manquer un indice",
@@ -194,7 +195,7 @@ function goToChapter(chapterName) {
   barreOptions.innerHTML = buttons;
   console.log(chapter.video);
 
-  //vid ne joue pas
+///vid
  if (chapter.video != undefined) {
   const video= document.querySelector(".vid");
   video.innerHTML= `<video src="${chapter.video}" loop muted autoplay ></video>`;
@@ -213,23 +214,23 @@ function goToChapter(chapterName) {
 
   //LocalStorage
 
-  if( chapter.action == undefined){
-    localStorage.setItem("chapitreAJ", chapter.subtitle);
+  if( chapter.action != undefined){
+    localStorage.setItem("chapitreAJ", chapterName);
   }
-  localStorage.getItem("chapitreAJ");
-
+ // localStorage.getItem("chapitreAJ");
+ // localStorage.setItem("chapitreAJ", chapterName);
 }
 
 let mapFounded = false;
 localStorage.setItem("chapitreAJ", mapFounded);
-localStorage.getItem("chapitreAJ");
+// localStorage.getItem("chapitreAJ");
 
 function foundedmap() {
   mapFounded = true;
   goToChapter("chapter3MC");
  localStorage.setItem("chapitreAJ", mapFounded);
 }
-localStorage.getItem("chapitreAJ");
+//localStorage.getItem("chapitreAJ");
 
 function map() {
   if (mapFounded == true) {
