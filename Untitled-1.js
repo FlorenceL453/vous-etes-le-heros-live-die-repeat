@@ -213,11 +213,12 @@ function goToChapter(chapterName) {
   //}
 
   //LocalStorage
-
+  localStorage.setItem("chapitreAJ", chapterName);
   if( chapter.action != undefined){
-    localStorage.setItem("chapitreAJ", chapterName);
+    localStorage.getItem("chapitreAJ");
   }
- // localStorage.getItem("chapitreAJ");
+ // goToChapter('chapterReveille');
+localStorage.getItem("chapitreAJ");
  // localStorage.setItem("chapitreAJ", chapterName);
 }
 
