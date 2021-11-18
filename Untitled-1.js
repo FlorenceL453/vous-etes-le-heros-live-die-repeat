@@ -217,8 +217,8 @@ function goToChapter(chapterName) {
   if( chapter.action != undefined){
     localStorage.getItem("chapitreAJ");
   }
- // goToChapter('chapterReveille');
-localStorage.getItem("chapitreAJ");
+  //goToChapter('chapterReveille');
+  //localStorage.getItem("chapitreAJ");
  // localStorage.setItem("chapitreAJ", chapterName);
 }
 
@@ -243,3 +243,4 @@ function map() {
 }
 
 goToChapter("chapterReveille");
+localStorage.getItem("chapitreAJ");
