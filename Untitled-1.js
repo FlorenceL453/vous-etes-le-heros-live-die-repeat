@@ -214,11 +214,18 @@ function goToChapter(chapterName) {
 
   //LocalStorage
  
+//localStorage.setItem("chapitreAJ", chapterName);
 
   if( chapter.action != undefined){
+    localStorage.setItem("chapitreAJ", chapterName);
+    action = localStorage.getItem("chapitreAJ");
     localStorage.getItem("chapitreAJ");
   }
-  localStorage.setItem("chapitreAJ", chapterName);
+  if( 'chapitreAJ' != chapterName){
+   action= localStorage.getItem("chapitreAJ");
+   localStorage.getItem("chapitreAJ");
+  }
+
   //goToChapter('chapterReveille');
   //localStorage.getItem("chapitreAJ");
  // localStorage.setItem("chapitreAJ", chapterName);
@@ -245,4 +252,3 @@ function map() {
 }
 
 goToChapter("chapterReveille");
-localStorage.getItem("chapitreAJ");
