@@ -1,7 +1,3 @@
-// note de prof (Tu n’as pas été pénalisé, mais tu peux appeler ton premier chapitre à la fin du code JavaScript afin de démarrer ton jeu dès le chargement de la page.)
-
-//localStorage.setItem("chapitreAJ");
-
 const chapterObjet = {
   chapterReveille: {
     subtitle: "Le Début De La Journée",
@@ -176,7 +172,7 @@ const chapterObjet = {
   },
 };
 function goToChapter(chapterName) {
-  // foundedmap("chapter3MC");
+  localStorage.setItem('currentChapter', chapterName); // On sauvegardd à quel chapitre nous sommes rendu
   let chapter = chapterObjet[chapterName];
 
   const ti = document.querySelector(".titre");
@@ -195,14 +191,12 @@ function goToChapter(chapterName) {
   barreOptions.innerHTML = buttons;
   console.log(chapter.video);
 
-///vid
- if (chapter.video != undefined) {
+  ///vid
   const video= document.querySelector(".vid");
-  video.innerHTML= `<video src="${chapter.video}" loop muted autoplay ></video>`;
- }
-  if(chapter.video == undefined){
-    const video= document.querySelector(".vid");
-   video.innerHTML= `<img src="${chapter.img}"></img>`;
+  if (chapter.video != undefined) {
+    video.innerHTML= `<video src="${chapter.video}" loop muted autoplay>`;
+  } else {
+    video.innerHTML= `<img src="${chapter.img}">`;
   }
 
   //Son a chaque chapitre
@@ -211,44 +205,29 @@ function goToChapter(chapterName) {
     const son =  document.querySelector(".audio");
    son.innerHTML = `<audio src="${chapter.son}" autoplay></audio>`;
   //}
-
-  //LocalStorage
- 
-//localStorage.setItem("chapitreAJ", chapterName);
-
-  if( chapter.action != undefined){
-    localStorage.setItem("chapitreAJ", chapterName);
-    action = localStorage.getItem("chapitreAJ");
-    localStorage.getItem("chapitreAJ");
-  }
-  if( 'chapitreAJ' != chapterName){
-   action= localStorage.getItem("chapitreAJ");
-   localStorage.getItem("chapitreAJ");
-  }
-
-  //goToChapter('chapterReveille');
-  //localStorage.getItem("chapitreAJ");
- // localStorage.setItem("chapitreAJ", chapterName);
 }
 
 let mapFounded = false;
-localStorage.setItem("chapitreAJ", mapFounded);
-// localStorage.getItem("chapitreAJ");
+if(localStorage.getItem("mapFounded") != undefined) {
+  mapFounded = localStorage.getItem("mapFounded");
+}
 
 function foundedmap() {
   mapFounded = true;
   goToChapter("chapter3MC");
- localStorage.setItem("chapitreAJ", mapFounded);
+  localStorage.setItem("mapFounded", mapFounded);
 }
-//localStorage.getItem("chapitreAJ");
 
 function map() {
   if (mapFounded == true) {
     goToChapter("chapter8");
-  }
-  if (mapFounded == false) {
+  } else {
     goToChapter("chapter7MC");
   }
 }
 
-goToChapter("chapterReveille");
+let currentChapter = "chapterReveille"; // Chapitre auquel l'histoire devrait débuter
+if(localStorage.getItem("currentChapter")) { // Est-ce qu'on a sauvegardé un chapitre?
+  currentChapter = localStorage.getItem("currentChapter"); // Si oui, ça devrait être notre chapitre de début
+}
+goToChapter(currentChapter); // Commencer l'histoire avec le chapitre de début
