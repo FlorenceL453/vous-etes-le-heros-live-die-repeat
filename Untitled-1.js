@@ -207,7 +207,7 @@ function goToChapter(chapterName) {
   if(chapter.son != undefined){
     const son =  document.querySelector(".audio");
    son.innerHTML = `<audio src="${chapter.son}" autoplay></audio>`;
-  //}
+  }
 }
 
 let mapFounded = false;
@@ -252,6 +252,8 @@ btnReset.innerHTML= `<button type="button"> Effacer ma partie </button>`;
 
 btnReset.addEventListener('click',reset());
 
-//const
-//`<input type="checkbox" class="input"></input>`;
+// boite a cocher
 
+const boite = document.querySelector('.logo');
+
+boite.innerHTML= `<input type="checkbox" class="input">`;
