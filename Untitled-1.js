@@ -199,14 +199,22 @@ function goToChapter(chapterName) {
     video.innerHTML= `<img src="${chapter.img}">`;
   }
 
+  // boite a cocher
+
+    const boite = document.querySelector('.logo');
+
+    boite.innerHTML= `<div class='checkbox'><input type="checkbox" class="input"></div>`;
+
+
   //Son a chaque chapitre
   // audion on off
 
     const memoireAudio= true;
 
-  if(chapter.son != undefined){
+    if(boite== checked)
+  if(memoireAudio == true){
     const son =  document.querySelector(".audio");
-   son.innerHTML = `<audio src="${chapter.son}" autoplay></audio>`;
+    son.innerHTML = `<audio src="${chapter.son}" autoplay></audio>`;
   }
 }
 
@@ -246,14 +254,9 @@ goToChapter('chapterReveille');
 
 //btn reset
 
-const btnReset = document.querySelector('.logo');
+const btnReset = document.querySelector('.titre');
 
 btnReset.innerHTML= `<button type="button"> Effacer ma partie </button>`;
 
-btnReset.addEventListener('click',reset());
+btnReset.addEventListener('click',reset);
 
-// boite a cocher
-
-const boite = document.querySelector('.logo');
-
-boite.innerHTML= `<input type="checkbox" class="input">`;
