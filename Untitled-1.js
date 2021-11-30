@@ -200,8 +200,11 @@ function goToChapter(chapterName) {
   }
 
   //Son a chaque chapitre
+  // audion on off
 
-  //if(chapter.son != undefined){
+    const memoireAudio= true;
+
+  if(chapter.son != undefined){
     const son =  document.querySelector(".audio");
    son.innerHTML = `<audio src="${chapter.son}" autoplay></audio>`;
   //}
@@ -231,3 +234,24 @@ if(localStorage.getItem("currentChapter")) { // Est-ce qu'on a sauvegardé un ch
   currentChapter = localStorage.getItem("currentChapter"); // Si oui, ça devrait être notre chapitre de début
 }
 goToChapter(currentChapter); // Commencer l'histoire avec le chapitre de début
+
+
+//reset
+
+function reset(){
+mapFounded= false;
+localStorage.clear();
+goToChapter('chapterReveille');
+}
+
+//btn reset
+
+const btnReset = document.querySelector('.logo');
+
+btnReset.innerHTML= `<button type="button"> Effacer ma partie </button>`;
+
+btnReset.addEventListener('click',reset());
+
+//const
+//`<input type="checkbox" class="input"></input>`;
+
