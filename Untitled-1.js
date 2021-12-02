@@ -215,8 +215,10 @@ function goToChapter(chapterName) {
     const son =  document.querySelector(".audio");
   
     boite.addEventListener('change', function(){
-      localStorage.setItem('son');
+      boite.classList.toggle('checkbox.checked');
     })
+
+    localStorage.getItem('son');
 
   if(localStorage.getItem('son')== true){
    son.innerHTML = `<audio src="${chapter.son}"></audio>`;
@@ -264,7 +266,7 @@ goToChapter('chapterReveille');
 
 const btnReset = document.querySelector('.titre');
 
-btnReset.innerHTML= `<button type="button"> Effacer ma partie </button>`;
+btnReset.innerHTML= `<button type="button" class='effacer'> Effacer ma partie </button>`;
 
 btnReset.addEventListener('click',reset);
 

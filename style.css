@@ -88,3 +88,7 @@ img {
   background-color: var(--bleu);
   border: none;
 }
+.effacer{
+  background-color:var(--beige) ;
+  border: none;
+}
