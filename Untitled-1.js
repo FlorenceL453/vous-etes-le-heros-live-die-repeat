@@ -172,7 +172,7 @@ const chapterObjet = {
   },
 };
 function goToChapter(chapterName) {
-  localStorage.setItem('currentChapter', chapterName); // On sauvegardd à quel chapitre nous sommes rendu
+  localStorage.setItem('currentChapter', chapterName); // On sauvegard à quel chapitre nous sommes rendu
   let chapter = chapterObjet[chapterName];
 
   const ti = document.querySelector(".titre");
@@ -203,20 +203,28 @@ function goToChapter(chapterName) {
 
     const boite = document.querySelector('.logo');
 
-    boite.innerHTML= `<div class='checkbox'><input type="checkbox" class="input"></div>`;
+    boite.innerHTML= `<div class='checkbox'><input type="checkbox" class="input" checked='true' >Son</div>`;
 
 
   //Son a chaque chapitre
   // audion on off
 
     const memoireAudio= true;
+    localStorage.setItem('son', true);
 
-    if(boite== checked)
-  if(memoireAudio == true){
     const son =  document.querySelector(".audio");
-    son.innerHTML = `<audio src="${chapter.son}" autoplay></audio>`;
+  
+    boite.addEventListener('change', function(){
+      localStorage.setItem('son');
+    })
+
+  if(localStorage.getItem('son')== true){
+   son.innerHTML = `<audio src="${chapter.son}"></audio>`;
   }
-}
+
+  if(localStorage.getItem('son')== false)
+  son.classList.remove(`<audio src="${chapter.son}"></audio>`);
+};
 
 let mapFounded = false;
 if(localStorage.getItem("mapFounded") != undefined) {
