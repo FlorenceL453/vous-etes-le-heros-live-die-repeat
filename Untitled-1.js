@@ -202,9 +202,7 @@ function goToChapter(chapterName) {
   // boite a cocher
 
     const boite = document.querySelector('.logo');
-
     boite.innerHTML= `<div class='checkbox'><input type="checkbox" class="input" checked='true' >Son</div>`;
-
 
   //Son a chaque chapitre
   // audion on off
@@ -213,20 +211,30 @@ function goToChapter(chapterName) {
     localStorage.setItem('son', true);
 
     const son =  document.querySelector(".audio");
-  
-    boite.addEventListener('change', function(){
-      boite.classList.toggle('checkbox.checked');
-    })
+    const checkbox = document.querySelector('.checkbox');
+    
+      if(checkbox==`${checked='true'}`){
+        son.innerHTML = `<audio src="${chapter.son}"></audio>`;
+      }else{
+
+      }
+    }
+
+    //boite.addEventListener('change', function(){
+    //boite.classList.toggle(son,boite.checked);
+    //})
 
     localStorage.getItem('son');
 
-  if(localStorage.getItem('son')== true){
-   son.innerHTML = `<audio src="${chapter.son}"></audio>`;
-  }
 
-  if(localStorage.getItem('son')== false)
-  son.classList.remove(`<audio src="${chapter.son}"></audio>`);
-};
+
+  //if(checkbox==checked){
+  //  localStorage.getItem('son')
+  
+  //}
+
+  //if(localStorage.getItem('son')== false)
+  //son.classList.remove(`<audio src="${chapter.son}"></audio>`);
 
 let mapFounded = false;
 if(localStorage.getItem("mapFounded") != undefined) {
