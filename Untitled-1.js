@@ -201,9 +201,6 @@ function goToChapter(chapterName) {
 
   // boite a cocher
 
-    const boite = document.querySelector('.logo');
-    boite.innerHTML= `<div class='checkbox'><input type="checkbox" class="input" checked='true' >Son</div>`;
-
   //Son a chaque chapitre
   // audion on off
 
@@ -268,6 +265,7 @@ function reset(){
 mapFounded= false;
 localStorage.clear();
 goToChapter('chapterReveille');
+btnReset.innerHTML= `<button type="button" class='effacer'> Effacer ma partie </button>`;
 }
 
 //btn reset
