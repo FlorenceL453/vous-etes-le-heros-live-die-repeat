@@ -209,8 +209,9 @@ function goToChapter(chapterName) {
 
     const son =  document.querySelector(".audio");
     const checkbox = document.querySelector('.checkbox');
+    const input = document.querySelector('.input');
     
-      if(checkbox==`${checked='true'}`){
+      if(input.checked==true){
         son.innerHTML = `<audio src="${chapter.son}"></audio>`;
       }else{
 
