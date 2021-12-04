@@ -208,15 +208,15 @@ function goToChapter(chapterName) {
     localStorage.setItem('son', true);
 
     const son =  document.querySelector(".audio");
-    const checkbox = document.querySelector('.checkbox');
     const input = document.querySelector('.input');
-    
-      if(input.checked==true){
-        son.innerHTML = `<audio src="${chapter.son}"></audio>`;
-      }else{
+    son.innerHTML = `<audio src="${chapter.son}"></audio>`;
 
-      }
+    if(input.checked == true){
+      son.play();
     }
+    //  else(input.checked==false)
+     //  son.pause();
+  }
 
     //boite.addEventListener('change', function(){
     //boite.classList.toggle(son,boite.checked);
