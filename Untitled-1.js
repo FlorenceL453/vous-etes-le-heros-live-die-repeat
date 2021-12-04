@@ -175,6 +175,13 @@ function goToChapter(chapterName) {
   localStorage.setItem('currentChapter', chapterName); // On sauvegard à quel chapitre nous sommes rendu
   let chapter = chapterObjet[chapterName];
 
+  
+chapter.innerHTML= `<body class="${chapterName}">`;
+
+//.addEventListener("change", function(){
+  //localStorage.getItem("currentChapter");
+  //`<body class="currentChapter">`;
+//})
   const ti = document.querySelector(".titre");
   ti.innerText = chapter.subtitle;
   console.log(ti.innerText);
@@ -205,7 +212,6 @@ function goToChapter(chapterName) {
   // audion on off
 
     const memoireAudio= true;
-    localStorage.setItem('son', true);
 
     const son =  document.querySelector(".audio");
     const input = document.querySelector('.input');
@@ -214,15 +220,7 @@ function goToChapter(chapterName) {
     if(input.checked == true){
       son.play();
     }
-    //  else(input.checked==false)
-     //  son.pause();
-  }
-
-    //boite.addEventListener('change', function(){
-    //boite.classList.toggle(son,boite.checked);
-    //})
-
-    localStorage.getItem('son');
+}
 
 
 
