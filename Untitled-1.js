@@ -213,9 +213,9 @@ chapter.innerHTML= `<body class="${chapterName}">`;
 
     const memoireAudio= true;
 
-    const son =  document.querySelector(".audio");
+    const son =  new Audio('assets/son/son_page.mp3');
     const input = document.querySelector('.input');
-    son.innerHTML = `<audio src="${chapter.son}"></audio>`;
+    //son.innerHTML = `<audio src="${chapter.son}"></audio>`;
 
     if(input.checked == true){
       son.play();
