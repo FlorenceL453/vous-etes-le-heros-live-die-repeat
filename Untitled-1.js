@@ -174,14 +174,14 @@ const chapterObjet = {
 function goToChapter(chapterName) {
   localStorage.setItem('currentChapter', chapterName); // On sauvegard à quel chapitre nous sommes rendu
   let chapter = chapterObjet[chapterName];
-
   
-chapter.innerHTML= `<body class="${chapterName}">`;
+  console.log([chapterName]);
+   const chapitre= document.querySelector('body');
 
-//.addEventListener("change", function(){
-  //localStorage.getItem("currentChapter");
-  //`<body class="currentChapter">`;
-//})
+ //  chapitre.classList.remove([chapterName]);
+   chapitre.classList.add([chapterName]);
+   
+
   const ti = document.querySelector(".titre");
   ti.innerText = chapter.subtitle;
   console.log(ti.innerText);
@@ -215,22 +215,11 @@ chapter.innerHTML= `<body class="${chapterName}">`;
 
     const son =  new Audio('assets/son/son_page.mp3');
     const input = document.querySelector('.input');
-    //son.innerHTML = `<audio src="${chapter.son}"></audio>`;
 
     if(input.checked == true){
       son.play();
     }
 }
-
-
-
-  //if(checkbox==checked){
-  //  localStorage.getItem('son')
-  
-  //}
-
-  //if(localStorage.getItem('son')== false)
-  //son.classList.remove(`<audio src="${chapter.son}"></audio>`);
 
 let mapFounded = false;
 if(localStorage.getItem("mapFounded") != undefined) {
