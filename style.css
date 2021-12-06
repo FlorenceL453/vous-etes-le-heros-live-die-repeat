@@ -112,6 +112,7 @@ img {
  }
  .chapter1{
    background: linear-gradient( to top, #456166,#90d4e0, #ffe8d1);
+   color:var(--bleu);
  }
  .sousTitre{
    margin-bottom: 20px;
