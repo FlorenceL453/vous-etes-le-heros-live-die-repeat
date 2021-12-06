@@ -96,3 +96,22 @@ img {
   background-color:#8a6856;
   color:var(--beige);
 }
+.image{
+ background-image: url(assets/img/sable.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+ }
+ .chapter8{
+  background-color:#8a6856;
+  color:var(--beige);
+ }
+ body.chapter8{
+  background-image: url(assets/img/monnaie.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+ }
+ .chapter1{
+   background: linear-gradient( to top, #456166,#90d4e0, #ffe8d1);
+ }
