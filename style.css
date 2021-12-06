@@ -92,3 +92,7 @@ img {
   background-color:var(--beige) ;
   border: none;
 }
+.chapterReveille{
+  background-color:#8a6856;
+  color:var(--beige);
+}

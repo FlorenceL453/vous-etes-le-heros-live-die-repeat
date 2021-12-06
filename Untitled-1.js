@@ -175,11 +175,8 @@ function goToChapter(chapterName) {
   localStorage.setItem('currentChapter', chapterName); // On sauvegard à quel chapitre nous sommes rendu
   let chapter = chapterObjet[chapterName];
   
-  console.log([chapterName]);
-   const chapitre= document.querySelector('body');
-
- //  chapitre.classList.remove([chapterName]);
-   chapitre.classList.add([chapterName]);
+  const chapitre= document.querySelector('body');
+  chapitre.className = chapterName;
    
 
   const ti = document.querySelector(".titre");
@@ -253,14 +250,11 @@ function reset(){
 mapFounded= false;
 localStorage.clear();
 goToChapter('chapterReveille');
-btnReset.innerHTML= `<button type="button" class='effacer'> Effacer ma partie </button>`;
 }
 
 //btn reset
 
-const btnReset = document.querySelector('.titre');
-
-btnReset.innerHTML= `<button type="button" class='effacer'> Effacer ma partie </button>`;
+const btnReset = document.querySelector('.effacer');
 
 btnReset.addEventListener('click',reset);
 
