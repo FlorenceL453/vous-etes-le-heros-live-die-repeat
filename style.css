@@ -21,6 +21,7 @@ html {
   height: 100%;
 }
 body {
+  margin: 0px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -30,7 +31,7 @@ body {
 }
 .game {
   width: 750px;
-  height: 630px;
+  height: 700px;
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
@@ -67,6 +68,7 @@ img {
 .bouton1 {
   background-color: var(--beige);
   border: none;
+  width:200px;
 }
 .bouton1:hover {
   background-color: var(--bleu);
@@ -91,27 +93,26 @@ img {
 .effacer{
   background-color:var(--beige) ;
   border: none;
+  margin-bottom:10px;
+  margin-left: 10px;
+  margin-right:10px;
 }
 .chapterReveille{
   background-color:#8a6856;
   color:var(--beige);
-}
-.image{
  background-image: url(assets/img/sable.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.5;
  }
  .chapter8{
-  background-color:#8a6856;
   color:var(--beige);
- }
- body.chapter8{
   background-image: url(assets/img/monnaie.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.5;
  }
  .chapter1{
    background: linear-gradient( to top, #456166,#90d4e0, #ffe8d1);
+ }
+ .sousTitre{
+   margin-bottom: 20px;
  }
