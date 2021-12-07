@@ -17,6 +17,9 @@
 :root {
   --noisette: #a17c68;
 }
+:root{
+  --brunF:#8a6856;
+}
 html {
   height: 100%;
 }
@@ -27,7 +30,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100%;
-  background-color: var(--beige);
+  background-color:var(--brunF);
 }
 .game {
   width: 750px;
@@ -98,12 +101,14 @@ img {
   margin-right:10px;
 }
 .chapterReveille{
-  background-color:#8a6856;
   color:var(--beige);
  background-image: url(assets/img/sable.jpg);
   background-repeat: no-repeat;
   background-size: cover;
  }
+.chapterReveille .game{
+  background-color:#8a6856;
+}
  .chapter8{
   color:var(--beige);
   background-image: url(assets/img/monnaie.jpg);
@@ -116,4 +121,7 @@ img {
  }
  .sousTitre{
    margin-bottom: 20px;
+ }
+  body.chapter2{
+    background-color:#8a6856;
  }
