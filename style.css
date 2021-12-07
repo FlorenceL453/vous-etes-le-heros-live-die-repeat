@@ -1,3 +1,5 @@
+* { box-sizing: border-box; }
+
 @font-face {
   src: url("assets/font/Korataki Regular.ttf") format(ttf);
   font-family: "korataki-regular";
@@ -55,7 +57,7 @@ img {
   object-fit: contain;
 }
 .vid{
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   width: 750px;
   object-fit: contain;
@@ -111,10 +113,13 @@ img {
 }
  .chapter8{
   color:var(--beige);
-  background-image: url(assets/img/monnaie.jpg);
+  background-image: url(assets/img/monnai.jpg);
   background-repeat: no-repeat;
   background-size: cover;
  }
+ body.chapter8{
+  background-color:#8a6856;
+}
  .chapter1{
    background: linear-gradient( to top, #456166,#90d4e0, #ffe8d1);
    color:var(--bleu);
@@ -124,4 +129,7 @@ img {
  }
   body.chapter2{
     background-color:#8a6856;
+ }
+ .chapter3{
+  background: linear-gradient( to top, #223366,#30d3f0, #ffe8d1);
  }
