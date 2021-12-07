@@ -109,7 +109,7 @@ img {
   background-size: cover;
  }
 .chapterReveille .game{
-  background-color:#8a6856;
+ opacity: 0.8;
 }
  .chapter8{
   color:var(--beige);
@@ -119,6 +119,9 @@ img {
  }
  body.chapter8{
   background-color:#8a6856;
+}
+.chapter8 .game{
+  opacity: 0.9;
 }
  .chapter1{
    background: linear-gradient( to top, #456166,#90d4e0, #ffe8d1);
